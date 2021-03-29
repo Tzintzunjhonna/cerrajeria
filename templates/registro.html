@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="stndz-style"></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/estilosa.css">
+    <title>Cerrajeria Lina</title>
+    <link href="/static/%22https://fonts.googleapis.com/css%3Ffamily%3DSource%2BSans%2BPro:300%2C300i%2C400%2C600%2C700%26display%3Dswap%22" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <nav class="menu">
+                <a href="/" style="top: 0px;">Inicio</a>
+
+            </nav>
+            
+            <div class="textos" style="opacity: 1; margin-top: -52px;">
+                <h1 class="nombre">Cerrajeria <span>Lina</span></h1>
+                <h3>Con más de 30 años de experiencia</h3>
+ 
+            </div>
+        </div>
+    </header>
+    
+    <section class="main">
+        <section class="productos" id="productos">
+            <div class="contenedor">
+                <h3 class="titulo"><img src="../static/img/iconos/icons8-añadir-usuario-masculino-35.png" alt=""> Registrate </h3>   
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-success">
+                           <button class="close" data-dismiss="alert"><span>&times;</span></button>
+                           <h1>{{ message }}</h1>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %} 
+                <form action="/add_contact" method="POST">
+                    <input type="text" placeholder="Nombre" name="nombre" autocomplete="off" required="">
+                    <input type="text" placeholder="Apellido" name="apellido" autocomplete="off" required="">
+                    <input type="email" placeholder="example@example.com" name="correo" autocomplete="off" required="">
+                    <input type="password" pattern=".{8,16}"  placeholder="Debe contener minimo 8 caracteres" name="passw" autocomplete="off" required="">
+                    <input type="submit" value="Registrar">
+                    <input type="reset" value="Borrar">
+                    <p class="s">¿Ya tienes una cuenta?<a href="{{ url_for('login') }}">   Inicia sesión  <img src="../static/img/iconos/icons8-accede-redondeado-derecho-25.png" alt=""></a></p>
+                    
+                </form>
+    <footer>
+        <div class="contenedor">
+            <div class="copyright">
+                <p>Copyright Cerrajeria Lina @2019</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/efectos.js"></script>
+    <script src={{url_for('static' ,filename="../static/js/bootstrap.min.js")}}></script>
+
+</div>
+</section>
+</section>
+</body>
+</html>

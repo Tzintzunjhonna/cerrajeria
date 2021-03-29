@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url('../img/reg-log/avr.jpg')#fff;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+
+.contenedor{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+/*---------- Header --------*/
+header .contenedor{
+    position: relative;
+    height: 50px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+header .menu {
+    width: 100%;
+    text-align: right;
+}
+
+header .menu a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 10px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+header .menu a:hover{
+    text-decoration: underline;
+}
+/*------------ Formulario -----------*/
+.formulario .contenedor{
+    width: 80%;
+    max-width: 1000px;
+    height: 300px;
+    background: rgba(242,242,242,0.4);
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.formulario .contenedor .formulario{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.formulario .contenedor .formulario input[type="text"]{
+    width: 49%;
+}
+
+.formulario .contenedor .formulario input[type="email"],
+.formulario .contenedor .formulario input[type="password"]{
+    width: 100%;
+}
+
+.formulario .contenedor .formulario input[type="text"],
+.formulario .contenedor .formulario input[type="email"],
+.formulario .contenedor .formulario input[type="password"]{
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    background: white;
+    color: black;
+    font-size: 20px;
+}
+
+.formulario .contenedor .formulario input[type="submit"],
+.formulario .contenedor .formulario input[type="reset"]{
+    margin-bottom: 20px;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    background: white;
+    color: black; 
+    font-size: 15px;
+    margin: auto;
+    transform: scale(1);
+    margin-bottom: 5px;
+}
+.formulario .contenedor .formulario input[type="submit"]:hover{
+    transform: scale(1.1);
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+.formulario .contenedor .formulario input:hover{
+    border: 1px solid white;
+}
+
+.formulario .contenedor .formulario input:focus{
+    border: 1px solid white;
+}
+
+.formulario .contenedor .formulario p{
+    width: 100%;
+    text-align: center;
+}
+
+.formulario .contenedor .formulario p a{
+    text-decoration: none;
+    color: darkslategray;
+    margin: 0 5px;
+}
+
+.formulario .contenedor .formulario p a:hover{
+    text-decoration: underline;
+    color: mediumpurple;
+    margin: 0 5px;
+}
+
+@media screen and (max-width:800px){
+    body{
+        ground: url('../img/reg-log/fondo3.jpg')#281a0c;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    }
+}

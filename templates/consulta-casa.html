@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+   <link rel="stylesheet" href={{url_for('static', filename="../static/css/esti-cons-carr.css")}}>
+   <link rel="stylesheet" href={{url_for('static', filename="../static/css/esti-cons-cas.css")}}>
+   <link href={{url_for('static', filename='"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,600,700&display=swap"')}} rel="stylesheet">
+    <section class="main-car">
+            <div class="contenedor-car">
+                <h3 class="titulo-car">Formulario de Consulta</h3>
+                    <br>
+                    <br>
+                    <br>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-success">
+                       <button class="close" data-dismiss="alert"><span>&times;</span></button>
+                       <p>{{ message }}</p>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                <div class="contenedor-for">
+                    <div class="form-car">
+                        <form action="/consultacasa" method="POST" class="formulario-car" autocomplete="off">
+                            <input type="text" placeholder="Domicilo" name="Domicilio" autocomplete="off" required="">
+                            <input type="number" placeholder="Número teléfonico" name="Numero" autocomplete="off" required="">
+                            <input type="email" placeholder="Correo Electrónico" name="Correo" autocomplete="off" required="">
+                            <textarea name="Referencia" id="" placeholder="Referencias" autocomplete="off" required=""></textarea>
+                            <p class="tipo-tra">Tipo de Trabajo</p>
+                            <select name="Tipo_trabajo" id="list">
+                                <option value="abrir-casa">Abrir casa</option>
+                                <option value="rep-switch">Reparación de chapa</option>
+                                <option value="cam-chapa"> Colocar chapa de seguridad</option>
+                                <option value="cam-switch">Colocar chapa de barra tetra</option>
+                                <option value="programacion">Colocar chapa de barra llave larga</option>
+                                <option value="duplicado">Colocar chapa convencional</option>
+                                <option value="abrir-car">Colocar chapa de perilla</option>
+                            </select>
+                            <input type="submit" value="Consultar">
+                            <p class="letritas">El tiempo de respuesta de su consulta sera máximo 24hrs., atravez de su correo electrónico.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+{% endblock %}

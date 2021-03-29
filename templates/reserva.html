@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+  {% block content %}
+    <section class="main">
+        <section class="objeto">
+            <div class="contenedor">
+                <h3 class="titulo"> <img src="../static/img/iconos/icons8-usuario-de-género-neutro-100.png" alt=""></h3>
+                <h3 class="seleccion">Seleccione tipo de reserva</h3>
+                <div class="contenedor-objeto">
+                    <div class="objeto">
+                        <div class="object">
+                            <a href="{{url_for('reservacar')}}"><img src="../static/img/consulta/carro.jpg" alt="Vehículo"></a>
+                        </div>
+                        <div class="descripcion">
+                            <p class="des">Vehículo</p>
+                        </div>
+                    </div>
+                    <div class="objeto">
+                        <div class="object">
+                            <a href="{{url_for('reservacas')}}"><img src="../static/img/consulta/casa.jpg" alt="Hogar"></a>
+                        </div>
+                        <div class="descripcion">
+                            <p class="des">Hogar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+  {% endblock %}

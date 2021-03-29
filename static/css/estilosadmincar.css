@@ -1,0 +1,75 @@
+@import url(bootstrap.min.css);
+
+td{
+    padding: 20px 25px;
+    margin: 0 50px;
+    border: 1px solid rgba(255,255,255,.7);
+}
+
+.table .fecha,
+.table .correo{
+    padding: 0 50px;
+}
+
+table{
+    margin: auto;
+    border: 1px solid purple;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.main .tabla{
+    background: #f2f2f2;
+    padding: 60px 0;
+}
+
+.contenedor-mensaje{
+   width: 100%;
+   max-width: 1000px;
+   margin: auto;
+   overflow: hidden;
+}
+
+.contenedor-mensaje p{
+    text-align: left;
+}
+
+.main .tabla .titulo{
+     font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #323068;
+    text-align: center;
+}
+
+.main .productos .contenedor{
+    overflow: hidden;
+}
+
+.main .productos .contenedor-tabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main .tabla .contenedor-tabla .tabla .table .table thead tr td h3{
+    line-height: 34px;
+    font-weight: 300;
+    color: #323068;
+}
+.main .tabla .contenedor-tabla .tabla .table .table tbody tr:hover{
+    background: rgba(248,186,58,.7);
+    color: black;
+}
+.main .tabla .contenedor-tabla .tabla .table .table tbody tr td a{
+    color: black;
+    text-decoration: underline;
+
+}
+
+.main .tabla .contenedor-tabla .tabla .table .table tbody tr td a:hover{
+    color: #000;
+    text-decoration: none;
+}

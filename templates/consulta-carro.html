@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+   <link rel="stylesheet" href={{url_for('static', filename="../static/css/esti-cons-carr.css")}}>
+    <section class="main-car">
+        <section class="form-car">
+            <div class="contenedor-car">
+                <h3 class="titulo-car">Formulario de Consulta
+                    <br>
+                    <br>
+                    <br>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-success">
+                       <button class="close" data-dismiss="alert"><span>&times;</span></button>
+                       <p>{{ message }}</p>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </h3>
+                <div class="contenedor-for">
+                    <div class="form-car">
+                        <form action="/consultacarro" method="POST" class="formulario-car">
+                            <input type="text" placeholder="Marca ej: Ford(explorer)" name="marca" autocomplete="off" required="">
+                            <input type="text" placeholder="Modelo" name="Modelo" autocomplete="off" required="">
+                            <input type="text" placeholder="Ubicación (Municipio)" name="Ubicacion" autocomplete="off" required="">
+                            <input type="email" placeholder="Correo Electrónico" name="Correo" autocomplete="off" required="">
+                            <p class="tipo-tra">Tipo de Trabajo</p>
+                            <select name="Tipo_trabajo" id="list">
+                                <option value="rep-chapa">Reparación de chapa</option>
+                                <option value="rep-switch">Reparación de switch</option>
+                                <option value="cam-chapa">Cambion de chapa</option>
+                                <option value="cam-switch">Cambio de switch</option>
+                                <option value="programacion">Programación</option>
+                                <option value="duplicado">Duplicado</option>
+                                <option value="abrir-car">Abrir carro</option>
+                            </select>
+                            <input type="submit" value="Consultar">
+                            <p class="letritas">El tiempo de respuesta de su consulta sera máximo 24hrs., atravez de su correo electrónico.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+{% endblock %}

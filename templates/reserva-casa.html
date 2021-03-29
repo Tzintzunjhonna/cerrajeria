@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+   <link rel="stylesheet" href={{url_for('static', filename="../static/css/esti-cons-carr.css")}}>
+   <link rel="stylesheet" href={{url_for('static', filename="../static/css/esti-cons-cas.css")}}>
+   <link href={{url_for('static', filename='"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,600,700&display=swap"')}} rel="stylesheet">
+    <section class="main-car">
+        <section class="form-car">
+            <div class="contenedor-car">
+                <h3 class="titulo-car">Formulario de Reserva
+                    <br>
+                    <br>
+                    <br>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    {{ message }}
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </h3>
+                <div class="contenedor-for">
+                    <div class="form-car">
+                        <form action="/reservacasa" method="POST" class="formulario-car" autocomplete="off" >
+                            <input type="text" placeholder="Domicilo" name="Domicilio" autocomplete="off" required="">
+                            <input type="number" placeholder="Número teléfonico" name="Numero" autocomplete="off" required="">
+                            <input type="email" placeholder="Correo Electrónico" name="Correo" autocomplete="off" required="">
+                            <textarea placeholder="Referencias" name="Referencia" autocomplete="off" required=""></textarea>
+                            <p class="tipo-tra">Tipo de Trabajo</p>
+                            <select id="list" name="Tipo_trabajo" autocomplete="off" required="">
+                                <option value="abrir-casa">Abrir casa</option>
+                                <option value="rep-switch">Reparación de chapa</option>
+                                <option value="cam-chapa"> Colocar chapa de seguridad</option>
+                                <option value="cam-switch">Colocar chapa de barra tetra</option>
+                                <option value="programacion">Colocar chapa de barra llave larga</option>
+                                <option value="duplicado">Colocar chapa convencional</option>
+                                <option value="abrir-car">Colocar chapa de perilla</option>
+                            </select>
+                            <input type="date" placeholder="Fecha de reserva" name="Fecha" autocomplete="off" required="">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+                            <input type="submit" value="Reservar">
+                            <p class="letritas">El tiempo de respuesta de su consulta sera máximo 24hrs., atravez de su correo electrónico.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+{% endblock %}

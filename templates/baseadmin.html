@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename= 'css/estilosindex.css')}}>
+    <title>Cerrajeria Lina</title>
+    <link href={{url_for('static', filename='"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,600,700&display=swap"')}} rel="stylesheet"> 
+    <link rel="icon" href="../static/img/1564939489(1).ico">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+           <nav class="menu">
+                <a href="protected" id="btn-productos">Inicio</a>
+                <a href="logout" id="btn-registrate">Cerrar Sesión</a>
+            </nav>
+            <div class="textos">
+                <h1 class="nombre">Cerrajeria <span>Lina</span></h1>
+                <h3>Con más de 30 años de experiencia</h3>
+                <h3>Administrador</h3>
+            </div>
+        </div>
+    </header>
+    
+     <!-- Bloque de contenido de cada página -->
+    {% block content %}
+    
+    
+    {% endblock %}
+    <!-- Pié de página -->
+
+    <footer>
+        <div class="contenedor">
+            <div class="copyright">
+                <p>Copyright Cerrajeria Lina @2019</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src={{url_for('static', filename="js/jquery-3.4.1.min.js")}}></script>
+    <script src={{url_for('static',filename="js/efectos.js")}}></script>
+    <script src={{url_for('static' ,filename="../static/js/bootstrap.min.js")}}></script>
+</body>
+</html>

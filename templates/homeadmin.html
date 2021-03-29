@@ -1,0 +1,87 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename= 'css/estilosadmin.css')}}>
+    <title>Cerrajeria Lina</title>
+    <link href={{url_for('static', filename='"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,600,700&display=swap"')}} rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+           <nav class="menu">
+                <a href="logout" id="btn-registrate">Cerrar Sesión</a>
+            </nav>
+            <div class="textos">
+                <h1 class="nombre">Cerrajeria <span>Lina</span></h1>
+                <h3>Con más de 30 años de experiencia</h3>
+                <h3>¡Bienvenido!</h3>
+            </div>
+        </div>
+    </header>
+    
+    <section class="main">
+        <section class="objeto">
+            <h3 class="mensaje">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <img src="../static/img/iconos/icons8-configuración-del-administrador-75.png" alt="">
+                {{ message }}
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </h3>
+            <br>
+                <br>
+                <br>
+                <br>
+            <h3 class="seleccion">Seleccione que tipo de datos quiere revisar</h3>
+
+
+            <div class="contenedor">
+                <div class="contenedor-objeto">
+                    <div class="objeto">
+                        <div class="object">
+                            <a href="{{url_for('adminres')}}"><img src="../static/img/admin/reserva.jpg" alt="Vehículo"></a>
+                        </div>
+                        <div class="descripcion">
+                            <p class="des">Reserva</p>
+                        </div>
+                    </div>
+                    <div class="objeto">
+                        <div class="object">
+                            <a href="{{url_for('admincon')}}"><img src="../static/img/admin/consulta.jpg" alt="Vehículo"></a>
+                        </div>
+                        <div class="descripcion">
+                            <p class="des">Consulta</p>
+                        </div>
+                    </div>
+                    <div class="objeto">
+                        <div class="object">
+                            <a href="{{url_for('usuarios')}}"><img src="../static/img/admin/df491bf444acfa945630c22389140d4a-icono-de-sombra-de-usuario-by-vexels.png" alt="Vehículo"></a>
+                        </div>
+                        <div class="descripcion">
+                            <p class="des">Usuarios</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <div class="copyright">
+                <p>Copyright Cerrajeria Lina @2019</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src={{url_for('static', filename="js/jquery-3.4.1.min.js")}}></script>
+    <script src={{url_for('static',filename="js/efectos.js")}}></script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avr</title>
+</head>
+<body>
+    {% from "_macro.html" import render_field %}
+    
+    <form action="">
+       <br>
+        {{ render_field(form.username)}}
+        <br>
+        {{ render_field(form.email)}}
+        <br>
+        {{ render_field(form.comment)}}
+    </form>
+</body>
+</html>

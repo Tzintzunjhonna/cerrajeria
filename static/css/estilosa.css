@@ -1,0 +1,363 @@
+@import url(estilosconsulta.css);
+@import url(bootstrap.min.css);
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+/*---------- HEADER ----------*/
+header{
+    width: 100%;
+    background: url('../img/header/cerrajeria.jpg')#fff;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+}
+
+header .contenedor{
+    position: relative;
+    height: 500px;
+}
+header .menu {
+    width: 100%;
+    text-align: right;
+}
+
+header .menu a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+header .menu a:hover{
+    text-decoration: underline;
+}
+
+header .textos{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -52px;
+}
+
+header .textos .nombre{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+header .textos .nombre span{
+    font-weight: 300;
+}
+
+header .textos h3{
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+}
+/*----------------------------*/
+.main .productos{
+    background: #f2f2f2;
+    padding: 60px 0;
+}
+
+.main .productos .contenedor{
+    overflow: hidden;
+}
+
+.main .productos .titulo{
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #323068;
+    text-align: center;
+
+
+}
+form{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(237, 217, 178,.3);
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,.2);
+    margin-bottom: 50px;
+}
+form h4{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 19, 0,.2);
+    padding: 30px;
+    border: 1px solid rgba(202,44,10,.2);
+    margin-bottom: 50px;
+    text-align: center;
+}
+form p{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(222, 64, 246,.3);
+    padding: 30px;
+    border: 2px solid rgba(222,64,246,.2);
+    margin-bottom: 50px;
+    text-align: center;
+}
+form p .s{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(82,190,128,.3);
+    padding: 30px;
+    border: 1px solid rgba(202,44,10,.2);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+@media only screen and (device-width: 800px) and (orientation: portrait){
+    form{
+        padding-top: 80px;
+        width: 100%;
+        padding: 10px;
+        background: #000;
+    }
+}
+
+input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: white;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    background: rgb(189,120,25);
+    color: white;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover
+{
+    background: white;
+    color: rgb(189,120,25);
+    cursor: pointer;
+    border: 1px solid rgb(189,120,25);
+}
+
+input[type="email"]:hover,
+input[type="text"]:hover,
+input[type="password"]:hover{
+    transform: scale(1.031);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus{
+    transform: scale(1.031);
+}
+
+.main .productos .contenedor-productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main .productos .contenedor-productos .productos{
+    width: 23%;    
+    margin-bottom: -50px;
+}
+
+.main .productos .contenedor-productos .productos .thumb{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.main .productos .contenedor-productos .productos .thumb img{
+    width: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+    opacity: .5;
+    transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.2);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+.main .productos .contenedor-productos .productos .thumb img:hover{
+    opacity: 1;
+     transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+}
+.main .productos .contenedor-productos .productos .descripcion{
+    text-align: center;
+}
+
+.main .productos .contenedor-productos .productos .descripcion .nombre{
+    font-weight: 700;
+    color: #3895ea;
+    margin-bottom: 10px;
+}
+
+/*-------- Ubicacion --------*/
+
+.main .ubicacion {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.main .ubicacion .titulo{
+    text-align: center;
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #323068;
+}
+
+.main .ubicacion .direccion{
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.main .ubicacion .horarios{
+    float: right;
+    width: 50%;
+    text-align: right;
+    overflow: hidden;
+}
+
+.main .ubicacion .direccion .calle{
+    margin-bottom: 15px;
+}
+
+.main .ubicacion .horarios h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .sabado,
+.main .ubicacion .horarios .domingo{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+/*------ Mapa ------*/
+
+.main .mapa{
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .mapa iframe{
+    width: 100%;
+    max-width: 1500px;
+}
+
+/*----- footer ------*/
+
+footer {
+    width: 100%;
+    background: #000;
+
+}
+
+footer .copyright{
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+
+}
+
+/*-------- Media Queries --------*/
+
+@media screen and (max-width: 800px){
+    header .contenedor{
+        position: static;
+        height: auto;
+    }
+    
+    header .textos{
+        position: static;
+        margin: 100px 0;
+    }
+    
+    header .menu{
+        text-align: center;
+    }
+    
+    header .menu a{
+        margin: 10px 20px;
+    }
+    
+    header .textos .nombre{
+        font-size: 30px;
+    }
+    
+    header .textos .h3{
+        font-size: 28px;
+    }
+    
+    .main .productos{
+        width: 100%;
+    }
+    
+    .main .productos .contenedor-productos .productos{
+        width: 50%;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .main .mapa{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    input{
+        padding: 10px;
+        font-size: 16px;
+    }
+    }
+}

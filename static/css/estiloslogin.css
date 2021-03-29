@@ -1,0 +1,133 @@
+@import url(bootstrap.min.css);
+*{
+/*    margin: 0;*/
+/*    padding: 0;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+header .contenedor{
+    position: relative;
+    height: 50px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+header .menu {
+    width: 100%;
+    text-align: right;
+}
+
+header .menu a{
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 10px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+header .menu a:hover{
+    text-decoration: underline;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url('../img/reg-log/log.jpg')#fff;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+.contenedor .formulario{
+    display: flex;
+    width: 100%;
+}
+
+.contenedor-mensaje{
+   width: 100%;
+   max-width: 1000px;
+   margin: auto;
+   overflow: hidden;
+}
+
+.contenedor-mensaje p{
+    text-align: left;
+}
+form{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255,255,255,.3);
+    padding: 50px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(0,0,0,.7);
+}
+
+input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: #000;
+
+}
+
+input[type="submit"]{
+    background: white;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover{
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="email"]:hover,
+input[type="password"]:hover{
+    transform: scale(1.02);
+}
+
+input[type="email"],
+input[type="password"]{
+    margin 20px 0;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus{
+    transform: scale(1.02);
+}
+
+@media screen and (max-width:800px){
+    body{
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (device-width: 800px) and (orientation: portrait){
+    form{
+        padding-top: 80px;
+        width: 100%;
+        padding: 10px;
+        background: #000;
+    }
+}

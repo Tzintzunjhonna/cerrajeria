@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+   <link rel="stylesheet" href={{url_for('static', filename="../static/css/esti-cons-carr.css")}}>
+    <section class="main-car">
+        <section class="form-car">
+            <div class="contenedor-car">
+                <h3 class="titulo-car">Formulario de Reserva
+                    <br>
+                    <br>
+                    <br>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    {{ message }}
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </h3>
+                <div class="contenedor-for">
+                    <div class="form-car">
+
+                        <form action="/reservacarro" method="POST" class="formulario-car">
+                            <input type="text" placeholder="Marca ej: Ford(explorer)" name="Marca" required="">
+                            <input type="text" placeholder="Modelo" name="Modelo" required="">
+                            <input type="text" placeholder="Ubicación (Municipio)" name="Ubicacion" required="">
+                            <input type="email" placeholder="Correo Electrónico" name="Correo" required="">
+                            <p class="tipo-tra">Tipo de Trabajo</p>
+                            <select id="list" name="Tipo_trabajo" required="">
+                                <option value="rep-chapa">Reparación de chapa</option>
+                                <option value="rep-switch">Reparación de switch</option>
+                                <option value="cam-chapa">Cambion de chapa</option>
+                                <option value="cam-switch">Cambio de switch</option>
+                                <option value="programacion">Programación</option>
+                                <option value="duplicado">Duplicado</option>
+                                <option value="abrir-car">Abrir carro</option>
+                            </select>
+                            <input type="date" placeholder="Fecha de Reserva" name="Fecha" required="">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+                            <input type="submit" value="Reservar">
+                            <p class="letritas">El tiempo de respuesta de su consulta sera máximo 24hrs., atravez de su correo electrónico.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+{% endblock %}

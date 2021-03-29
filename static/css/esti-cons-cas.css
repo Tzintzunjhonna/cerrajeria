@@ -1,0 +1,45 @@
+@import url(bootstrap.min.css);
+
+textarea{
+    min-height: 120px;
+    max-height: 150px;
+    min-width: 50%;
+    max-width: 50%;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 2px solid purple;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.main-car .form-car .contenedor-for .form-car .formulario-car input[type="date"]{
+    padding: 10px 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border: 2px solid purple;
+    border-radius: 18px;
+    width: 50%;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.main-car .form-car .contenedor-for .form-car .formulario-car input[type="number"]{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -o-appearance: button;
+    -ms-appearance: button;
+    appearance: button;
+}
+
+@media screen and (max-width: 400px){
+textarea{
+    min-height: 130px;
+    max-height: 180px;
+    min-width: 100%;
+    max-width: 100%;
+}
+      .main-car .form-car .contenedor-for .form-car .formulario-car input[type="date"]{
+        width: 100%;
+    }
+        
+}

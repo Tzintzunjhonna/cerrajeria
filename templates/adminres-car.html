@@ -1,0 +1,62 @@
+
+{%  extends 'baseadmin.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="../static/css/estilosadmincar.css">
+    <form action="/carroreserva"  method="POST">
+         <section class="main">
+                <section class="tabla">
+                    <div class="contenedor">
+                       <h3 class="seleccion">Reservas Automovil
+                            <br>
+                            <br>
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert alert-success">
+                               <button class="close" data-dismiss="alert"><span>&times;</span></button>
+                               <h3><img src="../static/img/iconos/icons8-casilla-de-verificación-2-30.png" alt="">{{ message }}</h3>
+                           </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% endwith %}
+                       </h3>
+                        <div class="contenedor-tabla">
+                            <div class="tabla">
+                                <div class="table">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td><h4>Marca</h4></td>
+                                                <td><h4>Modelo</h4></td>
+                                                <td><h4>Ubicacion</h4></td>
+                                                <td><h4>Correo</43></td>
+                                                <td><h4>Tipo de trabajo</h4></td>
+                                                <td><h4>Fecha</h4></td>
+                                                <td><h4>Operador</h4></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for contact in contacts %}
+                                            <tr>
+                                                <td>{{ contact.1 }}</td>
+                                                <td>{{ contact.2 }}</td>
+                                                <td>{{ contact.3 }}</td>
+                                                <td>{{ contact.4 }}</td>
+                                                <td>{{ contact.5 }}</td>
+                                                <td>{{ contact.6 }}</td>
+                                                <td class="borrar"><a href="/delete/{{contact.0}}"><img src="../static/img/iconos/eliminar.png"></a></td>
+                                            </tr>
+
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+    </form>
+
+{% endblock %}
